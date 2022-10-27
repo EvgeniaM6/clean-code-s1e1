@@ -6,6 +6,13 @@
 	font-family: Lato, sans-serif;
 }
 
+.main-title {
+	position: absolute;
+	margin: 0;
+	font-size: 1px;
+	color: #f8f8f8;
+}
+
 .introduction {
 	width: 500px;
 	margin: 0 auto;
@@ -29,7 +36,7 @@
 
 }
 
-.main {
+.main-block {
 	display: block;
 	width: 500px;
 	margin: 0 auto 0;
