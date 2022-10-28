@@ -32,19 +32,24 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
+    listItem.className="todo__item list-item";
+
     label.innerText=taskString;
-    label.className='task';
+    label.className='list-item__label task';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className="list-item__checkbox";
     editInput.type="text";
-    editInput.className="task";
+    editInput.className="list-item__text task input-text";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
+    editButton.className="list-item__btn edit button";
 
-    deleteButton.className="delete";
+    deleteButton.className="list-item__btn delete button";
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.className="delete__img";
+    deleteButtonImg.alt="delete this task";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -124,6 +129,9 @@ var taskCompleted=function(){
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
+    var label = listItem.querySelector('.list-item__label')
+    label.classList.add('completed__label')
+
 }
 
 
@@ -135,6 +143,9 @@ var taskIncomplete=function(){
     var listItem=this.parentNode;
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
+
+    var label = listItem.querySelector('.list-item__label')
+    label.classList.remove('completed__label')
 }
 
 

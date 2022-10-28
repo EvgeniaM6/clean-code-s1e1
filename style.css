@@ -6,7 +6,7 @@
 	font-family: Lato, sans-serif;
 }
 
-.main-title {
+.introduction__title {
 	position: absolute;
 	margin: 0;
 	font-size: 1px;
@@ -117,7 +117,7 @@ button {
 	margin: 0 0 20px;
 }
 
-#new-task {
+.add-task__input {
 	width: 318px;
 }
 
